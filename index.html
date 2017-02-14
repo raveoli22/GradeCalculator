@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="gradeCalculator">
+<head>
+    <link href="css/main.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+    
+    
+</head>
+<body ng-controller="MainController">
+    <div class="mainContainer">
+        <div class="header"> 
+            <h1>Grade Calculator</h1>
+        </div>
+        <div class = "Explaination">
+            <p>Enter in the grades you have received along with the weight for each of those grades. Press the Submit button to calculate the grade you will need on your remaining assignments in order to receive a certain target grade overall in the class</p>
+        </div>
+        <div class="targetGrade"> 
+            <h2>Target Grade: <br></h2>
+            <input type="number" step="any" placeholder="%" ng-model="target">
+        </div>
+        <form ng-submit="calcCurrent()">
+            <table>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Grade(%)</th>
+                    <th>Weight(%)</th>
+                </tr>
+                <tr ng-repeat="var in Assignment.assignmentData">
+                    <td> <strong>{{$index+1}}</strong></td>
+                    <td> <input type="number" step="any" ng-model="Assignment.assignmentData[$index].grade" placeholder="%"></td>
+                    <td> <input type="number" step="any" ng-model="Assignment.assignmentData[$index].weight" placeholder="%"></td>
+                </tr>
+            </table>
+            <div class="submission">
+                <button type="submit">SUBMIT</button>
+            </div>
+            </form>
+            <br><br><br>
+            <div class="submission">
+                <td><button ng-click="addRow()">ADD</button></td>
+            </div>
+            <br>
+
+            <div class="finalDisplay">
+                <table> 
+                    <thead>
+                        <h1> RESULTS </h1>
+                    </thead>
+                    <tr>
+                        <th>Target</th>
+                        <td><strong>{{targetholder}}%</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Current Grade</th>
+                        <td><strong>{{gradeSoFarAssignment|number:4}}%</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Weight accounted</th>
+                        <td><strong>{{weightSoFar}}%</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Weight unaccounted</th>
+                        <td><strong>{{weightLeft}}%</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Grade needed for target</th>
+                        <td><strong>{{gradeNeeded | number:4}}%</strong></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</body>
+
+</html>

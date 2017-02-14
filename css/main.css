@@ -1,0 +1,143 @@
+*{
+    //border: 1px solid black;
+}
+body{
+    background-color: whitesmoke;
+    
+}
+
+.mainContainer{ 
+    font-family: Verdana, Times New Roman, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 40px;
+    background: linear-gradient(to bottom, rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%);
+    //background-attachment: fixed;
+    background-size: cover;
+    width: 1000px;
+    position: relative;
+}
+
+.header {
+    //border: 4px solid black;
+    border-radius: 60px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    width: 90%;
+    padding: 10px;
+    
+}
+
+.header h1{
+    width: 85%;
+    margin: auto;
+}
+
+.Explaination {
+    width: 98%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.Explaination p {
+    width: 85%;
+    margin:auto;
+}
+
+table {
+    margin: auto
+}
+
+th,td {
+    //border: 1px solid grey;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+button {
+  background: #b8d934;
+  background-image: linear-gradient(top, #b8d934, #b8b12b);
+  border-radius: 39px;
+  font-family: Verdana;
+  font-size: 20px;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #b8d934;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+.submission button{
+    clear: both;
+    float: right;
+    position: relative;
+    right: 20px;
+    bottom: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+table input[type=number]{
+    width: 28%;
+    padding: 10px 10px;
+    margin: auto;
+    margin-left: 100px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.targetGrade input[type=number]{
+    width: 10%;
+    padding: 10px 10px;
+    margin: auto;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+
+.targetGrade {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    //padding: 20px 20px;
+}
+
+
+.finalDisplay{
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+.finalDisplay table {
+    background: linear-gradient(to bottom, rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%);
+    margin: auto;
+    margin-top: 40px;
+    padding: 50px;
+    border-radius: 40px;
+}
+
+.finalDisplay td {
+    padding: 20px 150px;
+    margin-left: 50px;
+}
